@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<title>RPISEC Tools VM</title>
+		<style>
+			body {
+				font-family: Hack,Monaco,Consolas,"Lucida Console",monospace;
+				color: #eaeaea;
+				background-color: #181a1b;
+			}
+			#main {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			p {
+				padding: 10px;
+			}
+			h1 {
+				text-align: center;
+			}
+			a {
+				color: #6adca9;
+			}
+			a:active {
+				color: #ddbbff;
+			}
+			a:focus {
+				color: #ddbbff;
+			}
+			.introsec {
+				color: #2aabdb;
+			}
+			.rpisec {
+				color: #6adca9;
+			}
+			.row {
+				display: flex;
+				flex-direction: row;
+			}
+			.row div {
+				flex-grow: 1;
+				flex-basis: 50%;
+			}
+		</style>
+		<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+	</head>
+	<body>
+		<div id="main">
+			<h1>RPISEC Tools / tools.rpis.ec</h1>
+			<div>
+				<h2>Slides</h2>
+				<h3>Spring 2020</h3>
+				<a href="https://docs.google.com/presentation/d/168ykUYVIULILUQnRU6_LxpiADtL3U4kXrBfLjgAhYao/edit">RPISEC Slides (February 14 -- C++ and Windows)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1K3HYOMhWby0mob1A4sH3_B8pIeEoqtAMaTb0pNYScFU/edit">RPISEC Slides (February 7 -- Jail Escapes)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1EXyswMliH6m1VKvWEWqMNBlQY5_i-wKSEDQQ0CaKGds/edit">RPISEC Slides (January 31 -- Binary Instrumentation)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1LjDdnu3fv8B3e28SyP674tl0XE_dH0cx7NIQgDxo-5U/edit">RPISEC Slides (January 24 -- Catching a Curveball)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/13XHxKc3KdkvLueZfCxj0z7M2_yD8c9J_XCJqMduvLrs/edit">RPISEC Slides (January 17 -- Lockpicking)</a>
+				<br>
+				<br>
+				<h3>Fall 2019</h3>
+				<a href="https://docs.google.com/presentation/d/1gM3fWs5Bwyy1GZ1jWsQRIRSK-3BZMTrtAV0RV0G2k40/edit">IntroSec Slides (December 10 -- PHP: Horrible Practices)</a>
+				<br>
+				<a href="http://tools.rpis.ec/symexec_presentation.pdf">RPISEC Slides (December 6 -- Symbolic Execution with Angr)</a>
+				<br>
+				<a href="http://tools.rpis.ec/intro_z3_presentation.pdf">IntroSec Slides (December 3 -- Introduction to Reversing with Z3)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1bglsYu3qIU2OyuEYuxrJKIP0N-9sUe8MVtdlWMVnG5U/edit">IntroSec Slides (November 19 -- CSAW Debriefing)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1ZPqUieuBzjX2TveuDIJ1KWbSP64ckgaNJ0BoTvH4LZA/edit">RPISEC Slides (November 15 -- Tougher Toolbox Talk)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1k8W-rkRDMjDThIeXl1knzjFjsCnUeSC5x1OXXeZDReE/edit">IntroSec Slides (November 12 -- Toolbox Talk)</a>
+				<br>
+				<a href="http://tools.rpis.ec/rsa_presentation.pdf">IntroSec Slides (October 29 -- Intro Asymmetric Cryptography)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1kG15YqL9lHt9051uQSd_EB6d3ccL6TukWBAzzH-0PMk/edit">RPISEC Slides (October 25 -- Advanced Web)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1uZrq5ltu01LmPQi9Z_YE7WmnHZPfS0Ealw6mlLZeuFs/edit">IntroSec Slides (October 22 -- Intermediate Web)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1NyrOdgTZF2jgTDCci7f-_Av56pLDuRba4-vVvGHGjqQ/edit">RPISEC Slides (October 18 -- Intro to Web / Exploitation)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1xzrSjFwoN_9xessOCPGzv_XHjU9knIdGH3v3eHRI0ac/edit">IntroSec Slides (October 15 -- Intro to Web)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1Wm2DpT-sP84c6yWcB4P8CvUMhPZnFon-FlX-bYr48Mk/edit">RPISEC Slides (October 11 -- Intro to Binary Exploitation part 2)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/177IIYpcvFMwD37etiCr_4hIqXjeBYiD2XBomnYw8e2A/edit">IntroSec Slides (October 8 -- How Do Programs Talk)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1Wm2DpT-sP84c6yWcB4P8CvUMhPZnFon-FlX-bYr48Mk/edit">RPISEC Slides (October 4 -- Intro to Binary Exploitation)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/193B2x8kBSNL07W2x4G2JArr3vcIJlYbo3RYMTFHrGCs/edit">IntroSec Slides (October 1 -- How Do Programs Work)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1WY5usTiajV19LwEnN0XTcD9OVKVsVygEZwyBX8V-rYg/edit">RPISEC Slides (September 27 -- Reverse Engineering)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1dL6mIUhAeUcMuaf0KwwmlpMdLO6iLUqWt8NyXiFMwUg/edit">IntroSec Slides (September 24 -- Intro RE & Pwn)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/17RpchZJ0R5epjDu6HU-jtLDXDVyTw6-2jibSSCmgFRo/edit">IntroSec Slides (September 17 -- Classic Cryptography)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1w5Y5NC8a84utm-Mbvp6GINV6lCpwERzf_OnA0X8zxLg/edit">IntroSec Slides (September 10 -- Steganography)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/19I9r6xvDAzqlfa1jkNLXq8PXAe7bid2mg-HzqtPKSNE/edit">RPISEC Slides (September 6 -- Fairgame Rundown)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/13ekSveKSbkIxEfPm-5sZzho8U78jpYmHMCNeS42Su1s/edit">IntroSec Slides (September 3 -- Intro to CTFs)</a>
+				<br>
+				<a href="https://docs.google.com/presentation/d/1qHk_-rPa6r1CciL2qWxyll-zKMWiq11B31Gf5-4aVGs/edit">RPISEC Slides (August 30 -- Intro)</a>
+			</div>
+			<div>
+				<h2>Resources</h2>
+				<a href="windows.zip">Windows Demos (February 14 -- C++ and Windows)</a>
+				<br>
+				<a href="pyjails.tar.gz">Python Jails (February 7 -- Jail Escapes)</a>
+				<br>
+				<a href="tougher_tools_demo.tar.gz">Tougher Toolbox Demos (November 15 -- Tougher Toolbox Talk)</a>
+				<br>
+				<a href="tools_demo.zip">Toolbox Demos (November 12 -- Toolbox Talk)</a>
+				<br>
+				<a href="http://web.rpis.ec:8080/WebGoat/">&quot;WebGoat&quot; Web Examples (October 22 -- Intermediate Web)</a>
+				<br>
+				<a href="http://web.rpis.ec">&quot;Damn Vulnerable Web Application&quot; Web Examples (October 15 -- Intro to Web)</a>
+				<br>
+				<a href="./exploit.py">Pwntools Example</a>
+				<a href="./uaf.zip">UAF Examples</a>
+				<a href="./shellcode.zip">Shellcode Examples</a>
+				<a href="./rop.zip">Rop Examples</a>
+(October 11)
+				<br>
+				<a href="/pwntools-demos.tar.gz">IntroSec Demo Challenges (October 8 -- How Do Programs Talk)</a>
+				<br>
+				<a href="/re-2-demo.tar.gz">RPISEC Demo Challenges (September 27 -- Reverse Engineering)</a>
+				<br>
+				<a href="/re-pwn-demo.tar.gz">IntroSec Demo Challenges (September 24 -- Intro to RE & Pwn)</a>
+				<br>
+				<a href="/substitution_cipher.py">Substitution Cipher Crack Script</a>
+				<br>
+				<a href="/stego-demo.tar.gz">IntroSec Demo Challenges (September 10 -- Steganography)</a>
+			</div>
+			<div>
+				<h2>Join</h2>
+				<a href="https://rpisec.slack.com">Join our Slack!</a> (Needs an @rpi.edu email, contact us otherwise)
+				<br>
+				<a href="https://cs.sympa.rpi.edu/wws/subscribe/rpisec">Join our Mailing List!</a>
+				<br>
+				<a href="http://fairgame.rpis.ec">Fairgame (RPISEC Intro CTF)</a>
+			</div>
+			<div>
+				<h2>Tools VM Download</h2>
+				<a href="/RPISECTools.zip">Download</a> (Size: ~4.9GiB compressed, ~9.0GiB uncompressed)
+				This machine comes with a variety of tools that we use on a regular basis and come in handy when working on CTFs.
+			</div>
+			<div>
+				<h2>Installation Instructions</h2>
+				This image works best with <a href="https://www.virtualbox.org/">VirtualBox</a>. After installing, create a new virtual machine for Linux/Ubuntu 64-bit, selecting "Use an existing virtual hard disk file" on the setup screen.
+				<br>
+				<br>
+				<a href="https://i.imgur.com/YrhydhB.jpg">Here's what it should look like</a>. After this, you should assign the VM some more CPU power. In the Settings, under System/Processor, increase the number of processors to at least 2. <a href="https://i.imgur.com/i0guWvu.jpg">It should look something like this</a>.
+				<br>
+				<br>
+				You may also want to install the VirtualBox Guest Additions to be able to expand the screen. You can find the option for it in the Devices menu. <a href="https://i.imgur.com/FniaMn5.jpg">Here's an image of what that looks like</a>.
+			</div>
+			<h2>General Information</h2>
+			<br>
+			Login/sudo password is: <strong>rpisec</strong>
+			<br>
+			<br>
+			Here's a quick list of software we have installed for you:
+
+			<h3>Reversing tools</h3>
+			<ul>
+				<li>IDA Freeware</li>
+				<li>Ghidra</li>
+				<li>Binary Ninja Demo</li>
+			</ul>
+
+			<h3>Pwning tools</h3>
+			<ul>
+				<li>gdb</li>
+				<li>pwngdb + peda</li>
+				<li>pwntools</li>
+			</ul>
+
+			<h3>Web tools</h3>
+			<ul>
+				<li>Wireshark</li>
+				<li>Burp Suite Community Edition</li>
+			</ul>
+
+			<h3>Misc tools</h3>
+			<ul>
+				<li>binwalk</li>
+				<li>z3</li>
+				<li>angr</li>
+				<li>Sublime Text</li>
+				<li>exiftool</li>
+				<li>spek</li>
+				<li>minimodem</li>
+			</ul>
+
+			<h3>Other useful information</h3>
+			<ul>
+				<li>Documentation is available online for all of these tools</li>
+				<li>Ask us if you get stuck somewhere. We've all been there and will be glad to help out</li>
+				<li>If you need to exit vim, hit Escape :wq</li>
+			</ul>
+		</div>
+	</body>
+</html>
