@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>RPISEC Tools VM</title>
+		<title>RPISEC Tools</title>
 		<style>
 			body {
 				font-family: Hack,Monaco,Consolas,"Lucida Console",monospace;
@@ -42,13 +42,76 @@
 				flex-basis: 50%;
 			}
 		</style>
-		<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
 	</head>
 	<body>
 		<div id="main">
-			<h1>RPISEC Tools / tools.rpis.ec</h1>
+			<h1>RPISEC Tools</h1>
+			
 			<div>
-				<h2>Slides</h2>
+				<h2>Contact</h2>
+				<a href="https://rpisec.slack.com">Join our Slack!</a> (Needs an @rpi.edu email, contact us otherwise)
+				<br>
+				<a href="https://cs.sympa.rpi.edu/wws/subscribe/rpisec">Join our Mailing List!</a>
+				<br>
+				<a href="http://fairgame.rpis.ec">Fairgame (RPISEC Intro CTF)</a>
+			</div>
+			<div>
+				<h2>Tools VM</h2>
+				<a href="https://drive.google.com/file/d/1rluSuEslj9UOfu4ibOVaXeukcPETVocf/view">Download</a> (Size: ~3.3GB)
+				This machine comes with a variety of tools that we use on a regular basis and come in handy when working on CTFs. Use this if you don't have Linux running on one of your machines, or just want a blank slate to work with.
+			</div>
+			<div>
+				<h2>Installation Instructions</h2>
+				This image works best with <a href="https://www.virtualbox.org/">VirtualBox</a>. After installing, go to <i>File > Import Appliance</i>, select the .ova file, and click through the dialogs.
+			</div>
+			<h2>General Information</h2>
+			<br>
+			Login/sudo password is: <strong>rpisec</strong>
+			<br>
+			<br>
+			Here's a quick list of software we have installed for you:
+
+			<h3>Reversing tools</h3>
+			<ul>
+				<li>Ghidra</li>
+			</ul>
+
+			<h3>Pwning tools</h3>
+			<ul>
+				<li>gdb + gef</li>
+				<li>pwntools</li>
+				<li>angr</li>
+			</ul>
+
+			<h3>Web tools</h3>
+			<ul>
+				<li>Wireshark</li>
+				<li>Burp Suite Community Edition</li>
+			</ul>
+
+			<h3>Misc tools</h3>
+			<ul>
+				<li>VSCode</li>
+				<li>binwalk</li>
+				<li>z3</li>
+				<li>angr</li>
+				<li>Sublime Text</li>
+				<li>exiftool</li>
+				<li>spek</li>
+				<li>minimodem</li>
+				<li>GIMP</li>
+				<li>ffmpeg</li>
+			</ul>
+
+			<h3>Other useful information</h3>
+			<ul>
+				<li>Documentation is available online for all of these tools</li>
+				<li>Ask us if you get stuck somewhere. We've all been there and will be glad to help out</li>
+				<li>If you need to exit vim, hit Escape, then type :wq</li>
+			</ul>
+			<div>
+				<h2>Old Slides</h2>
 				<h3>Spring 2020</h3>
 				<a href="https://docs.google.com/presentation/d/168ykUYVIULILUQnRU6_LxpiADtL3U4kXrBfLjgAhYao/edit">RPISEC Slides (February 14 -- C++ and Windows)</a>
 				<br>
@@ -107,7 +170,7 @@
 				<a href="https://docs.google.com/presentation/d/1qHk_-rPa6r1CciL2qWxyll-zKMWiq11B31Gf5-4aVGs/edit">RPISEC Slides (August 30 -- Intro)</a>
 			</div>
 			<div>
-				<h2>Resources</h2>
+				<h2>Old Resources</h2>
 				<a href="windows.zip">Windows Demos (February 14 -- C++ and Windows)</a>
 				<br>
 				<a href="pyjails.tar.gz">Python Jails (February 7 -- Jail Escapes)</a>
@@ -124,7 +187,7 @@
 				<a href="./uaf.zip">UAF Examples</a>
 				<a href="./shellcode.zip">Shellcode Examples</a>
 				<a href="./rop.zip">Rop Examples</a>
-(October 11)
+	(October 11)
 				<br>
 				<a href="/pwntools-demos.tar.gz">IntroSec Demo Challenges (October 8 -- How Do Programs Talk)</a>
 				<br>
@@ -136,73 +199,8 @@
 				<br>
 				<a href="/stego-demo.tar.gz">IntroSec Demo Challenges (September 10 -- Steganography)</a>
 			</div>
-			<div>
-				<h2>Join</h2>
-				<a href="https://rpisec.slack.com">Join our Slack!</a> (Needs an @rpi.edu email, contact us otherwise)
-				<br>
-				<a href="https://cs.sympa.rpi.edu/wws/subscribe/rpisec">Join our Mailing List!</a>
-				<br>
-				<a href="http://fairgame.rpis.ec">Fairgame (RPISEC Intro CTF)</a>
-			</div>
-			<div>
-				<h2>Tools VM Download</h2>
-				<a href="/RPISECTools.zip">Download</a> (Size: ~4.9GiB compressed, ~9.0GiB uncompressed)
-				This machine comes with a variety of tools that we use on a regular basis and come in handy when working on CTFs.
-			</div>
-			<div>
-				<h2>Installation Instructions</h2>
-				This image works best with <a href="https://www.virtualbox.org/">VirtualBox</a>. After installing, create a new virtual machine for Linux/Ubuntu 64-bit, selecting "Use an existing virtual hard disk file" on the setup screen.
-				<br>
-				<br>
-				<a href="https://i.imgur.com/YrhydhB.jpg">Here's what it should look like</a>. After this, you should assign the VM some more CPU power. In the Settings, under System/Processor, increase the number of processors to at least 2. <a href="https://i.imgur.com/i0guWvu.jpg">It should look something like this</a>.
-				<br>
-				<br>
-				You may also want to install the VirtualBox Guest Additions to be able to expand the screen. You can find the option for it in the Devices menu. <a href="https://i.imgur.com/FniaMn5.jpg">Here's an image of what that looks like</a>.
-			</div>
-			<h2>General Information</h2>
-			<br>
-			Login/sudo password is: <strong>rpisec</strong>
-			<br>
-			<br>
-			Here's a quick list of software we have installed for you:
-
-			<h3>Reversing tools</h3>
-			<ul>
-				<li>IDA Freeware</li>
-				<li>Ghidra</li>
-				<li>Binary Ninja Demo</li>
-			</ul>
-
-			<h3>Pwning tools</h3>
-			<ul>
-				<li>gdb</li>
-				<li>pwngdb + peda</li>
-				<li>pwntools</li>
-			</ul>
-
-			<h3>Web tools</h3>
-			<ul>
-				<li>Wireshark</li>
-				<li>Burp Suite Community Edition</li>
-			</ul>
-
-			<h3>Misc tools</h3>
-			<ul>
-				<li>binwalk</li>
-				<li>z3</li>
-				<li>angr</li>
-				<li>Sublime Text</li>
-				<li>exiftool</li>
-				<li>spek</li>
-				<li>minimodem</li>
-			</ul>
-
-			<h3>Other useful information</h3>
-			<ul>
-				<li>Documentation is available online for all of these tools</li>
-				<li>Ask us if you get stuck somewhere. We've all been there and will be glad to help out</li>
-				<li>If you need to exit vim, hit Escape :wq</li>
-			</ul>
 		</div>
+		
+		
 	</body>
 </html>
