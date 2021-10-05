@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      function greet() {
+        let name = document.querySelector("#name-field").value;
+        let greeting = document.querySelector("#greeting");
+
+        greeting.innerHTML = "Hi there, " + name + "!";
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return greet()">
+      <input
+        style="width: 350px"
+        type="text"
+        placeholder="name"
+        id="name-field"
+      />
+      <button onclick="greet()">Be Greeted</button>
+    </form>
+
+    <h1 id="greeting"></h1>
+  </body>
+</html>
